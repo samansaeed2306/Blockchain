@@ -30,14 +30,25 @@
   
   }
   
-  #btn{
-     position: absolute; 
-     bottom: -35px; 
-     padding: 5px;
-     margin: 0px 55px;
-     align-items: center;
-     border-radius: 5px"
-  }
+  #button {
+    position: relative;
+    bottom: 0;
+    padding: 10px 20px;
+    margin: 10px 0;
+    align-items: center;
+    border-radius: 20px;
+    background-color: #673ab7; /* Deep Purple */
+    color: #fff; /* Text color */
+    border: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+#button:hover {
+    background-color: #512da8; /* Darker shade on hover */
+}
+
+
   #container{
       margin-top:25px;
   }
