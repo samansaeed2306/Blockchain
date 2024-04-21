@@ -10,7 +10,7 @@
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.0/dist/css/bootstrap.min.css" rel="stylesheet"
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
-<nav class="navbar navbar-expand-lg navbar-light bg-light">
+<nav class="navbar navbar-expand-lg navbar-dark bg-dark">
   <div class="container-fluid">
     <a class="navbar-brand" href="#">Chat For Fun</a>
   </div>
@@ -68,7 +68,19 @@
      }
     }
         function bhej(){
-            var addres=document.getElementById("address").value;
+          const users=[];
+      users["Saman"]="0x22209b327DEB7531f1Dadf79fe4f0848004B2e94";
+      users["Ayesha"]=  "0xdEcC51b824c2b72231A1A5FD9E16FdadFf1fEbCF" ;
+      users["Eeman"]="0xcebd88A467E3D1a9AB9A30f75Af1ed1f866EB8cd";
+      users["Areeba"]="0x9DB5e0d38E26DD61Ca5113378eB2aF5B2A25511f";
+      users["Warda"]="0x82641DC3806Ed61fD854c1c5c783C1a2c7a4E1A0";
+      users["Hania"]="0xFC50dA345d75Ae4E76Ee3b3216f88d7419867551";
+      users["Amna"]="0x7Ac896De783d7024E3474847041f61528B3e2526";
+      users["Umama"]="0xeC94CfebA71676Ca4Cf03Ce41eB404744cDEa496";
+      users["Fatima"]="0x3E2d694b265DE5FEd9d730839aD0c346E3049A91";
+      users["Khadija"]="0x0bA736511091E4E87f61DEaB4E22074380a2CCE4";
+            var name=document.getElementById("address").value;
+            var addres=users[name];
             localStorage.setItem("myaddress",addres);
          window.location.replace('account.html');
         }

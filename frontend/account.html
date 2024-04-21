@@ -9,7 +9,7 @@
     integrity="sha384-gH2yIJqKdNHPEq0n4Mqa/HGKIhSkIHeL5AyhkYV8i59U5AR6csBvApHHNl/vI1Bx" crossorigin="anonymous">
 </head>
 
-<body style="background-color: #D8BFD8;">
+<body style="background-color: #ffff;">
   <div class="container p-3">
     <div class="row">
       <div class="col">
@@ -237,6 +237,18 @@
 
 
     function add() {
+      const users=[];
+      users["0x22209b327DEB7531f1Dadf79fe4f0848004B2e94"]="Saman";
+      users["0xdEcC51b824c2b72231A1A5FD9E16FdadFf1fEbCF"]="Ayesha";
+      users["0xcebd88A467E3D1a9AB9A30f75Af1ed1f866EB8cd"]="Eeman";
+      users["0x9DB5e0d38E26DD61Ca5113378eB2aF5B2A25511f"]="Areeba";
+      users["0x82641DC3806Ed61fD854c1c5c783C1a2c7a4E1A0"]="Warda";
+      users["0xFC50dA345d75Ae4E76Ee3b3216f88d7419867551"]="Hania";
+      users["0x7Ac896De783d7024E3474847041f61528B3e2526"]="Amna";
+      users["0xeC94CfebA71676Ca4Cf03Ce41eB404744cDEa496"]="Umama";
+      users["0x3E2d694b265DE5FEd9d730839aD0c346E3049A91"]="Fatima";
+      users["0x0bA736511091E4E87f61DEaB4E22074380a2CCE4"]="Khadija";
+
       let web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
       web3.eth.getAccounts(function (error, accounts) {
         var n = accounts.length;
@@ -249,7 +261,7 @@
         temp =temp+ '<div class="accordion-item p-3  border-primary bg-dark">'+
     '<h2 class="accordion-header" id="flush-heading'+accounts[i]+'">'+
       '<button id="'+accounts[i]+'"class="accordion-button collapsed" type="button" onclick=addMessages(this) data-bs-toggle="collapse" data-bs-target="#flush-collapse'+accounts[i]+'" aria-expanded="false" aria-controls="flush-collapse'+accounts[i]+'">'+
-        accounts[i]+
+       users[accounts[i]]+
       '</button>'+
     '</h2>'+
     '<div id="flush-collapse'+accounts[i]+'" class="accordion-collapse collapse" aria-labelledby="flush-heading'+accounts[i]+'" data-bs-parent="#accordionFlushExample">'+
@@ -260,7 +272,7 @@
 
         
         document.getElementById("accordionFlushExample").innerHTML = temp;
-        document.getElementById("Profile").innerHTML = 'Account:'+myaccount;
+        document.getElementById("Profile").innerHTML = 'Account: '+users[myaccount];
       });
 
 
